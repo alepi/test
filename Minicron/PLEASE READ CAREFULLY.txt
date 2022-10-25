@@ -1,0 +1,11 @@
+PLEASE READ CAREFULLY
+
+- This project has been created with Xcode Version 11.3.1 and swift 5.1.3 on macOS Mojave because this is what I have available at the moment. I normally have a more up to date Mac. There is no guarantee that simply updating the project to a newer Xcode/macOS version it will work as I have no way of trying it.
+
+- This project is signed to run locally rather than using a provisioning profile.
+
+- Because of this being a command line tool, testing needs some customization. Particularly, the files to be tested need to be added to the test target.
+
+- If I had more time I would have refactored the code in a way that made more verbose error handling possible. However, due to the simplicity of the input structure, I thought that what I have done here is good enough
+
+- If I had more time I would have added more test cases to increase coverage.

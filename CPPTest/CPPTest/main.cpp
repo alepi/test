@@ -37,6 +37,12 @@ private:
         return -1;
     }
     
+    void updateTotalsInternal(int value) {
+        totals.push_back(last_two[0]+last_two[1]+value);
+        last_two[0]=last_two[1];
+        last_two[1]=value;
+    }
+    
 public:
     
     std::vector<int> totals;
@@ -49,9 +55,7 @@ public:
         for(size_t i=0;i<list.size();i++) {
             if(totalsSize==0) {
                 if(index_to_use==2) {
-                    totals.push_back(last_two[0]+last_two[1]+list[i]);
-                    last_two[0]=last_two[1];
-                    last_two[1]=list[i];
+                    updateTotalsInternal(list[i]);
                     totalsSize = 1;
                 }
                 else {
@@ -59,9 +63,7 @@ public:
                 }
             }
             else {
-                totals.push_back(last_two[0]+last_two[1]+list[i]);
-                last_two[0]=last_two[1];
-                last_two[1]=list[i];
+                updateTotalsInternal(list[i]);
             }
         }
     }

@@ -13,9 +13,17 @@
 		280223BE29194A7500249E7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280223BC29194A7500249E7C /* Main.storyboard */; };
 		280223C029194A7800249E7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280223BF29194A7800249E7C /* Assets.xcassets */; };
 		280223C329194A7800249E7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280223C129194A7800249E7C /* LaunchScreen.storyboard */; };
-		280223CE29194A7800249E7C /* APITestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280223CD29194A7800249E7C /* APITestTests.swift */; };
 		280223D829194A7800249E7C /* APITestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280223D729194A7800249E7C /* APITestUITests.swift */; };
 		280223DA29194A7800249E7C /* APITestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280223D929194A7800249E7C /* APITestUITestsLaunchTests.swift */; };
+		28400931291A9A52007A436F /* MetropolitanMuseusOfArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28400930291A9A52007A436F /* MetropolitanMuseusOfArt.swift */; };
+		28400933291A9AE8007A436F /* JSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28400932291A9AE8007A436F /* JSONTests.swift */; };
+		28400935291A9C8F007A436F /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28400934291A9C8F007A436F /* Department.swift */; };
+		28400937291AA198007A436F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28400936291AA198007A436F /* DataManager.swift */; };
+		28400939291AA67A007A436F /* ItemID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28400938291AA67A007A436F /* ItemID.swift */; };
+		2840093B291AA7B4007A436F /* JSONTestsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840093A291AA7B4007A436F /* JSONTestsData.swift */; };
+		2840093D291AADAF007A436F /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840093C291AADAF007A436F /* DataManagerTests.swift */; };
+		2840093F291AB4C1007A436F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840093E291AB4C1007A436F /* Item.swift */; };
+		28BB1DCC291977C500A69A86 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BB1DCB291977C500A69A86 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +53,19 @@
 		280223C229194A7800249E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		280223C429194A7800249E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		280223C929194A7800249E7C /* APITestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APITestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		280223CD29194A7800249E7C /* APITestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestTests.swift; sourceTree = "<group>"; };
 		280223D329194A7800249E7C /* APITestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APITestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		280223D729194A7800249E7C /* APITestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestUITests.swift; sourceTree = "<group>"; };
 		280223D929194A7800249E7C /* APITestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		280223E62919574500249E7C /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		28400930291A9A52007A436F /* MetropolitanMuseusOfArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetropolitanMuseusOfArt.swift; sourceTree = "<group>"; };
+		28400932291A9AE8007A436F /* JSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTests.swift; sourceTree = "<group>"; };
+		28400934291A9C8F007A436F /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
+		28400936291AA198007A436F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		28400938291AA67A007A436F /* ItemID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemID.swift; sourceTree = "<group>"; };
+		2840093A291AA7B4007A436F /* JSONTestsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTestsData.swift; sourceTree = "<group>"; };
+		2840093C291AADAF007A436F /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
+		2840093E291AB4C1007A436F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		28BB1DCB291977C500A69A86 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +96,7 @@
 		280223AA29194A7500249E7C = {
 			isa = PBXGroup;
 			children = (
+				280223E62919574500249E7C /* README.txt */,
 				280223B529194A7500249E7C /* APITest */,
 				280223CC29194A7800249E7C /* APITestTests */,
 				280223D629194A7800249E7C /* APITestUITests */,
@@ -99,7 +117,10 @@
 		280223B529194A7500249E7C /* APITest */ = {
 			isa = PBXGroup;
 			children = (
+				2840092F291A98AD007A436F /* MetropolitanMuseumOfArt */,
 				280223B629194A7500249E7C /* AppDelegate.swift */,
+				28BB1DCB291977C500A69A86 /* NetworkManager.swift */,
+				28400936291AA198007A436F /* DataManager.swift */,
 				280223B829194A7500249E7C /* SceneDelegate.swift */,
 				280223BA29194A7500249E7C /* ViewController.swift */,
 				280223BC29194A7500249E7C /* Main.storyboard */,
@@ -113,7 +134,9 @@
 		280223CC29194A7800249E7C /* APITestTests */ = {
 			isa = PBXGroup;
 			children = (
-				280223CD29194A7800249E7C /* APITestTests.swift */,
+				28400932291A9AE8007A436F /* JSONTests.swift */,
+				2840093A291AA7B4007A436F /* JSONTestsData.swift */,
+				2840093C291AADAF007A436F /* DataManagerTests.swift */,
 			);
 			path = APITestTests;
 			sourceTree = "<group>";
@@ -125,6 +148,17 @@
 				280223D929194A7800249E7C /* APITestUITestsLaunchTests.swift */,
 			);
 			path = APITestUITests;
+			sourceTree = "<group>";
+		};
+		2840092F291A98AD007A436F /* MetropolitanMuseumOfArt */ = {
+			isa = PBXGroup;
+			children = (
+				28400930291A9A52007A436F /* MetropolitanMuseusOfArt.swift */,
+				28400934291A9C8F007A436F /* Department.swift */,
+				28400938291AA67A007A436F /* ItemID.swift */,
+				2840093E291AB4C1007A436F /* Item.swift */,
+			);
+			path = MetropolitanMuseumOfArt;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +293,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				280223BB29194A7500249E7C /* ViewController.swift in Sources */,
+				2840093F291AB4C1007A436F /* Item.swift in Sources */,
+				28BB1DCC291977C500A69A86 /* NetworkManager.swift in Sources */,
 				280223B729194A7500249E7C /* AppDelegate.swift in Sources */,
+				28400931291A9A52007A436F /* MetropolitanMuseusOfArt.swift in Sources */,
+				28400939291AA67A007A436F /* ItemID.swift in Sources */,
 				280223B929194A7500249E7C /* SceneDelegate.swift in Sources */,
+				28400937291AA198007A436F /* DataManager.swift in Sources */,
+				28400935291A9C8F007A436F /* Department.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +308,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280223CE29194A7800249E7C /* APITestTests.swift in Sources */,
+				28400933291A9AE8007A436F /* JSONTests.swift in Sources */,
+				2840093D291AADAF007A436F /* DataManagerTests.swift in Sources */,
+				2840093B291AA7B4007A436F /* JSONTestsData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,7 +539,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2MNJFCF34J;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alessandropistocchi.APITestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -517,7 +559,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2MNJFCF34J;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alessandropistocchi.APITestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -536,6 +578,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2MNJFCF34J;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alessandropistocchi.APITestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -554,6 +597,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2MNJFCF34J;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alessandropistocchi.APITestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

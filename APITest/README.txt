@@ -5,7 +5,7 @@ NOTES:
 - the API itself is a bit weird, in that for departments one can get a list of object IDs, not the objects themselves directly. This complicates the design of ItemListViewController
 
 - THIS IS AN API ISSUE, NOT AN ISSUE OF MY APP!!! I discovered that the API returns different values for the same call, or the same values but in a different order. Try multiple times from a web browser the folloowing call: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=1
-Unfortunately, fixing this in the app will require more time than what I can spend here.
+Unfortunately, fixing this in the app will require more investigation and more time than what I can spend here.
 
 - I have mixed different techniques just to try different things
 

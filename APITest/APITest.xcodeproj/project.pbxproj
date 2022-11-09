@@ -31,6 +31,7 @@
 		28C5E9A8291AF5E9002A9EA8 /* ExtensionsForTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C5E9A7291AF5E9002A9EA8 /* ExtensionsForTests.swift */; };
 		28C5E9AA291B1013002A9EA8 /* DepartmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C5E9A9291B1013002A9EA8 /* DepartmentTableViewCell.swift */; };
 		28C5E9B1291B13C9002A9EA8 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C5E9AF291B13C9002A9EA8 /* ItemListViewController.swift */; };
+		28ECFAE2291B925C0062FF66 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ECFAE1291B925C0062FF66 /* ItemDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		28C5E9A7291AF5E9002A9EA8 /* ExtensionsForTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsForTests.swift; sourceTree = "<group>"; };
 		28C5E9A9291B1013002A9EA8 /* DepartmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentTableViewCell.swift; sourceTree = "<group>"; };
 		28C5E9AF291B13C9002A9EA8 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
+		28ECFAE1291B925C0062FF66 /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				28400936291AA198007A436F /* DataModel.swift */,
 				28C5E9A3291ACAC5002A9EA8 /* DataController.swift */,
 				280223B829194A7500249E7C /* SceneDelegate.swift */,
+				28ECFAE3291B9CA70062FF66 /* SwiftUI */,
 				28C5E9AC291B1343002A9EA8 /* ViewControllers */,
 				280223BF29194A7800249E7C /* Assets.xcassets */,
 				28C5E9AD291B1367002A9EA8 /* Storyboards */,
@@ -212,6 +215,22 @@
 				281DF366291B1C3E0004F233 /* ItemTableViewCell.swift */,
 			);
 			path = IItemList;
+			sourceTree = "<group>";
+		};
+		28ECFAAA291B86860062FF66 /* ItemDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				28ECFAE1291B925C0062FF66 /* ItemDetailView.swift */,
+			);
+			path = ItemDetailView;
+			sourceTree = "<group>";
+		};
+		28ECFAE3291B9CA70062FF66 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				28ECFAAA291B86860062FF66 /* ItemDetailView */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +374,7 @@
 				281DF367291B1C3E0004F233 /* ItemTableViewCell.swift in Sources */,
 				28C5E9A4291ACAC5002A9EA8 /* DataController.swift in Sources */,
 				28400939291AA67A007A436F /* ItemID.swift in Sources */,
+				28ECFAE2291B925C0062FF66 /* ItemDetailView.swift in Sources */,
 				28C5E9B1291B13C9002A9EA8 /* ItemListViewController.swift in Sources */,
 				280223B929194A7500249E7C /* SceneDelegate.swift in Sources */,
 				28C5E9A6291AD8B4002A9EA8 /* DepartmentsViewModel.swift in Sources */,

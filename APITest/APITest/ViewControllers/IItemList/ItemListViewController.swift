@@ -6,9 +6,17 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ItemListViewController: UIViewController {
 
+    @IBSegueAction func showSwiftUIHostController(_ coder: NSCoder) -> UIViewController? {
+        let itemID = itemIDs[tableView.indexPathForSelectedRow!.row]
+        guard let item = items[itemID] else { return nil }
+        var view = ItemDetailView()
+        view.item = item
+        return UIHostingController(coder: coder, rootView: view)!
+    }
     var viewModel: ItemListViewModel!
 
     var department: Department! {
@@ -46,7 +54,10 @@ class ItemListViewController: UIViewController {
     // To do it properly would require more time than I have in this case, so I decided to just download each item
     // after the previous one has been displayed.
     //
-    // I could have done something similar in the model layer but the problem is essentially the same
+    // I could have done something similar in the model layer but the problem is essentially the same.
+    //
+    // To do this properly, it requires synchronisation between background threads using semaphores or
+    // lockless data structures or something analogous.
     private func fetchNextItem() {
         for i in 0..<maxItemsCount {
             let itemID = itemIDs[i]
@@ -79,11 +90,12 @@ class ItemListViewController: UIViewController {
             tableView.deselectRow(at: indexPathForSelectedRow, animated: false)
         }
     }
-    
+
 }
 
 extension ItemListViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: .showItemDetailSegueIdentifier, sender: nil)
     }
 }
 
@@ -105,6 +117,6 @@ extension ItemListViewController : UITableViewDataSource {
 extension String {
     
     static let itemTableViewCellIdentifier = "ItemTableViewCell"
-//    static let showItemListSegueIdentifier = "ShowItemListSegue"
+    static let showItemDetailSegueIdentifier = "ShowItemDetailSegue"
 
 }

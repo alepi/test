@@ -7,19 +7,13 @@
 
 import Foundation
 import Combine
+import UIKit // for UIImage
 
 // notice: as explained in the README, I did not write tests for networking code as failure may depend on issues that are not related to the code, such as network being down or similar
 
 class NetworkManager {
     
     static let defaultInstance = NetworkManager()
-    
-    private let urlSession : URLSession
-    
-    init() {
-        let urlSessionConfiguration = URLSessionConfiguration.default
-        urlSession = URLSession(configuration: urlSessionConfiguration)
-    }
     
     private func fetch(request: URLRequest) -> AnyPublisher<Data, Error> {
         return URLSession.DataTaskPublisher(request: request, session: .shared)
@@ -51,6 +45,16 @@ class NetworkManager {
     func fetchItem(for itemID: Int) -> AnyPublisher<Item, Error> {
         return fetch(request: MetropolitanMuseusOfArt.item(for: itemID))
             .decode(type: Item.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
+    }
+    
+    func fetchImage(from url: URL) -> AnyPublisher<Data, Error> {
+        let request = URLRequest(url: url)
+        return URLSession.DataTaskPublisher(request: request, session: .shared)
+            .tryMap { data, response in
+                guard let response = response as? HTTPURLResponse, 200..<300 ~= response.statusCode else { throw URLError(.badServerResponse) }
+                return data
+            }
             .eraseToAnyPublisher()
     }
 

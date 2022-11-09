@@ -13,9 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static func instance() -> AppDelegate { return UIApplication.shared.delegate as! AppDelegate }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        NetworkManager.defaultInstance.fetchDepartments(dataManager: DataManager.defaultInstance)
-//        NetworkManager.defaultInstance.fetchItemIDs(dataManager: DataManager.defaultInstance, for: DataManager.defaultInstance.departments[0])
-//        NetworkManager.defaultInstance.fetchItem(dataManager: DataManager.defaultInstance, for: DataManager.defaultInstance.itemIDs[1]![0])
         return true
     }
 

@@ -14,9 +14,10 @@ extension NSNotification.Name {
     public static let DataManagerItemsDidChange = NSNotification.Name("DataManagerItemsDidChange")
 
 }
-class DataManager {
+
+class DataModel {
     
-    static let defaultInstance = DataManager()
+    static let defaultInstance = DataModel()
 
     var departments: [Department] = [] {
         didSet {
@@ -24,13 +25,13 @@ class DataManager {
         }
     }
     
-    var itemIDs: [Int:[Int]] = [:] {
+    @Published var itemIDs: [Int:[Int]] = [:] {
         didSet {
             NotificationCenter.default.post(name: .DataManagerItemIDsDidChange, object: self)
         }
     }
     
-    var items: [Int:Item] = [:] {
+    @Published var items: [Int:Item] = [:] {
         didSet {
             NotificationCenter.default.post(name: .DataManagerItemsDidChange, object: self)
         }

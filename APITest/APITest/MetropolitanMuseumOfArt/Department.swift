@@ -14,8 +14,4 @@ struct Department : Decodable {
 
 struct DepartmentsResponseObject: Decodable {
     let departments: [Department]
-    
-    static func from(data: Data) -> DepartmentsResponseObject? {
-        return try? JSONDecoder().decode(DepartmentsResponseObject.self, from: data)
-    }
 }

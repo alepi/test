@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 // notice: as explained in the README, I did not write tests for networking code as failure may depend on issues that are not related to the code, such as network being down or similar
 
@@ -20,36 +21,37 @@ class NetworkManager {
         urlSession = URLSession(configuration: urlSessionConfiguration)
     }
     
-    private func fetch(request: URLRequest, completionBlock: @escaping (Data?, URLResponse?, Error?) -> Void) {
-        let dataTask = urlSession.dataTask(with: request, completionHandler: completionBlock)
-        dataTask.resume()
+    private func fetch(request: URLRequest) -> AnyPublisher<Data, Error> {
+        return URLSession.DataTaskPublisher(request: request, session: .shared)
+            .tryMap { data, response in
+                guard let response = response as? HTTPURLResponse, 200..<300 ~= response.statusCode else { throw URLError(.badServerResponse) }
+                return data
+            }
+            .eraseToAnyPublisher()
     }
     
-    func fetchDepartments(dataManager: DataManager) {
-        fetch(request: MetropolitanMuseusOfArt.departments) { data, response, error in
-            guard error == nil else { NSLog(error!.localizedDescription) ; return }
-            guard let data = data else { NSLog("response data is nil") ; return }
-            guard let responseObject = DepartmentsResponseObject.from(data: data) else { NSLog("response data is not valid") ; return }
-            dataManager.departments = responseObject.departments
-        }
+    func fetchDepartments() -> AnyPublisher<[Department], Error> {
+        return fetch(request: MetropolitanMuseusOfArt.departments)
+            .decode(type: DepartmentsResponseObject.self, decoder: JSONDecoder())
+            .map { responseObject -> [Department] in
+                return responseObject.departments
+            }
+            .eraseToAnyPublisher()
     }
     
-    func fetchItemIDs(dataManager: DataManager, for department: Department) {
-        fetch(request: MetropolitanMuseusOfArt.itemIDs(for: department)) { data, response, error in
-            guard error == nil else { NSLog(error!.localizedDescription) ; return }
-            guard let data = data else { NSLog("response data is nil") ; return }
-            guard let responseObject = ItemIDResponseObject.from(data: data) else { NSLog("response data is not valid") ; return }
-            dataManager.itemIDs[department.departmentId] = responseObject.itemIDs
-        }
+    func fetchItemIDs(for department: Department) -> AnyPublisher<[Int], Error> {
+        return fetch(request: MetropolitanMuseusOfArt.itemIDs(for: department))
+            .decode(type: ItemIDResponseObject.self, decoder: JSONDecoder())
+            .map { responseObject in
+                return responseObject.itemIDs
+            }
+            .eraseToAnyPublisher()
     }
     
-    func fetchItem(dataManager: DataManager, for itemID: Int) {
-        fetch(request: MetropolitanMuseusOfArt.item(for: itemID)) { data, response, error in
-            guard error == nil else { NSLog(error!.localizedDescription) ; return }
-            guard let data = data else { NSLog("response data is nil") ; return }
-            guard let responseObject = Item.from(data: data) else { NSLog("response data is not valid") ; return }
-            dataManager.items[itemID] = responseObject
-        }
+    func fetchItem(for itemID: Int) -> AnyPublisher<Item, Error> {
+        return fetch(request: MetropolitanMuseusOfArt.item(for: itemID))
+            .decode(type: Item.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
     }
 
 }

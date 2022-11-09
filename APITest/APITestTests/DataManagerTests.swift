@@ -15,16 +15,16 @@ final class DataManagerTests: XCTestCase {
     func testNotifications() {
         
         let observer = DataManagerNotificationObserverForTest()
-        let dataManager = DataManager.defaultInstance
+        let dataModel = DataModel.defaultInstance
         let item = Item.from(data: JSONTestsData.item)!
 
-        dataManager.departments = [Department(departmentId: 1, displayName: "American Decorative Arts")]
+        dataModel.departments = [Department(departmentId: 1, displayName: "American Decorative Arts")]
         wait(for: [observer.expectationForDepartments], timeout: 0.1)
         
-        dataManager.itemIDs[1] = [item.objectID!]
+        dataModel.itemIDs[1] = [item.objectID!]
         wait(for: [observer.expectationForItemIDs], timeout: 0.1)
 
-        dataManager.items = [item.objectID! : item]
+        dataModel.items = [item.objectID! : item]
         wait(for: [observer.expectationForItems], timeout: 0.1)
     }
     
@@ -32,18 +32,18 @@ final class DataManagerTests: XCTestCase {
 
 class DataManagerNotificationObserverForTest {
     
-    let expectationForDepartments = XCTNSNotificationExpectation(name: .DataManagerDepartmentsDidChange, object: DataManager.defaultInstance, notificationCenter: NotificationCenter.default)
-    let expectationForItemIDs = XCTNSNotificationExpectation(name: .DataManagerItemIDsDidChange, object: DataManager.defaultInstance, notificationCenter: NotificationCenter.default)
-    let expectationForItems = XCTNSNotificationExpectation(name: .DataManagerItemsDidChange, object: DataManager.defaultInstance, notificationCenter: NotificationCenter.default)
+    let expectationForDepartments = XCTNSNotificationExpectation(name: .DataManagerDepartmentsDidChange, object: DataModel.defaultInstance, notificationCenter: NotificationCenter.default)
+    let expectationForItemIDs = XCTNSNotificationExpectation(name: .DataManagerItemIDsDidChange, object: DataModel.defaultInstance, notificationCenter: NotificationCenter.default)
+    let expectationForItems = XCTNSNotificationExpectation(name: .DataManagerItemsDidChange, object: DataModel.defaultInstance, notificationCenter: NotificationCenter.default)
 
     init() {
-        NotificationCenter.default.addObserver(forName: .DataManagerDepartmentsDidChange, object: DataManager.defaultInstance, queue: nil) { [weak self] _ in
+        NotificationCenter.default.addObserver(forName: .DataManagerDepartmentsDidChange, object: DataModel.defaultInstance, queue: nil) { [weak self] _ in
             self?.expectationForDepartments.fulfill()
         }
-        NotificationCenter.default.addObserver(forName: .DataManagerItemIDsDidChange, object: DataManager.defaultInstance, queue: nil) { [weak self] _ in
+        NotificationCenter.default.addObserver(forName: .DataManagerItemIDsDidChange, object: DataModel.defaultInstance, queue: nil) { [weak self] _ in
             self?.expectationForItemIDs.fulfill()
         }
-        NotificationCenter.default.addObserver(forName: .DataManagerItemsDidChange, object: DataManager.defaultInstance, queue: nil) { [weak self] _ in
+        NotificationCenter.default.addObserver(forName: .DataManagerItemsDidChange, object: DataModel.defaultInstance, queue: nil) { [weak self] _ in
             self?.expectationForItems.fulfill()
         }
     }

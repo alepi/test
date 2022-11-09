@@ -11,11 +11,10 @@ import Foundation
 
 struct ItemIDResponseObject : Decodable {
     let total: Int
-    private let objectIDs: [Int]
+    let itemIDs: [Int]
     
-    var itemIDs: [Int] { return objectIDs }
-    
-    static func from(data: Data) -> ItemIDResponseObject? {
-        return try? JSONDecoder().decode(ItemIDResponseObject.self, from: data)
+    enum CodingKeys: String, CodingKey {
+        case total
+        case itemIDs = "objectIDs"
     }
 }

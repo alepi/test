@@ -7,7 +7,7 @@
 
 import Foundation
 
-// notice: here I have not messed around with naming of variables, as it would take me too much time.
+// notice: here I have not messed around with naming of variables and CodingKeys, as it would take me too much time.
 // also, all variables are optional as I have no time for testing which is and which isn't by trying all the possible data that can arrive
 
 struct Constituent : Decodable {
@@ -95,9 +95,4 @@ struct Item : Decodable {
     let objectWikidata_URL: String?
     let isTimelineWork: Bool?
     let GalleryNumber: String?
-
-    static func from(data: Data) -> Item? {
-        return try? JSONDecoder().decode(Item.self, from: data)
-    }
-
 }

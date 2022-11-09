@@ -9,21 +9,28 @@
 /* Begin PBXBuildFile section */
 		280223B729194A7500249E7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280223B629194A7500249E7C /* AppDelegate.swift */; };
 		280223B929194A7500249E7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280223B829194A7500249E7C /* SceneDelegate.swift */; };
-		280223BB29194A7500249E7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280223BA29194A7500249E7C /* ViewController.swift */; };
+		280223BB29194A7500249E7C /* DepartmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280223BA29194A7500249E7C /* DepartmentsViewController.swift */; };
 		280223BE29194A7500249E7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280223BC29194A7500249E7C /* Main.storyboard */; };
 		280223C029194A7800249E7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280223BF29194A7800249E7C /* Assets.xcassets */; };
 		280223C329194A7800249E7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280223C129194A7800249E7C /* LaunchScreen.storyboard */; };
 		280223D829194A7800249E7C /* APITestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280223D729194A7800249E7C /* APITestUITests.swift */; };
 		280223DA29194A7800249E7C /* APITestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280223D929194A7800249E7C /* APITestUITestsLaunchTests.swift */; };
+		281DF365291B1C2E0004F233 /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281DF364291B1C2E0004F233 /* ItemListViewModel.swift */; };
+		281DF367291B1C3E0004F233 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281DF366291B1C3E0004F233 /* ItemTableViewCell.swift */; };
 		28400931291A9A52007A436F /* MetropolitanMuseusOfArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28400930291A9A52007A436F /* MetropolitanMuseusOfArt.swift */; };
 		28400933291A9AE8007A436F /* JSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28400932291A9AE8007A436F /* JSONTests.swift */; };
 		28400935291A9C8F007A436F /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28400934291A9C8F007A436F /* Department.swift */; };
-		28400937291AA198007A436F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28400936291AA198007A436F /* DataManager.swift */; };
+		28400937291AA198007A436F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28400936291AA198007A436F /* DataModel.swift */; };
 		28400939291AA67A007A436F /* ItemID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28400938291AA67A007A436F /* ItemID.swift */; };
 		2840093B291AA7B4007A436F /* JSONTestsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840093A291AA7B4007A436F /* JSONTestsData.swift */; };
 		2840093D291AADAF007A436F /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840093C291AADAF007A436F /* DataManagerTests.swift */; };
 		2840093F291AB4C1007A436F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840093E291AB4C1007A436F /* Item.swift */; };
 		28BB1DCC291977C500A69A86 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BB1DCB291977C500A69A86 /* NetworkManager.swift */; };
+		28C5E9A4291ACAC5002A9EA8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C5E9A3291ACAC5002A9EA8 /* DataController.swift */; };
+		28C5E9A6291AD8B4002A9EA8 /* DepartmentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C5E9A5291AD8B4002A9EA8 /* DepartmentsViewModel.swift */; };
+		28C5E9A8291AF5E9002A9EA8 /* ExtensionsForTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C5E9A7291AF5E9002A9EA8 /* ExtensionsForTests.swift */; };
+		28C5E9AA291B1013002A9EA8 /* DepartmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C5E9A9291B1013002A9EA8 /* DepartmentTableViewCell.swift */; };
+		28C5E9B1291B13C9002A9EA8 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C5E9AF291B13C9002A9EA8 /* ItemListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +54,7 @@
 		280223B329194A7500249E7C /* APITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		280223B629194A7500249E7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		280223B829194A7500249E7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		280223BA29194A7500249E7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		280223BA29194A7500249E7C /* DepartmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsViewController.swift; sourceTree = "<group>"; };
 		280223BD29194A7500249E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		280223BF29194A7800249E7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		280223C229194A7800249E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,15 +64,22 @@
 		280223D729194A7800249E7C /* APITestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestUITests.swift; sourceTree = "<group>"; };
 		280223D929194A7800249E7C /* APITestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		280223E62919574500249E7C /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		281DF364291B1C2E0004F233 /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
+		281DF366291B1C3E0004F233 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		28400930291A9A52007A436F /* MetropolitanMuseusOfArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetropolitanMuseusOfArt.swift; sourceTree = "<group>"; };
 		28400932291A9AE8007A436F /* JSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTests.swift; sourceTree = "<group>"; };
 		28400934291A9C8F007A436F /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
-		28400936291AA198007A436F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		28400936291AA198007A436F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		28400938291AA67A007A436F /* ItemID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemID.swift; sourceTree = "<group>"; };
 		2840093A291AA7B4007A436F /* JSONTestsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTestsData.swift; sourceTree = "<group>"; };
 		2840093C291AADAF007A436F /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
 		2840093E291AB4C1007A436F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		28BB1DCB291977C500A69A86 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		28C5E9A3291ACAC5002A9EA8 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		28C5E9A5291AD8B4002A9EA8 /* DepartmentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsViewModel.swift; sourceTree = "<group>"; };
+		28C5E9A7291AF5E9002A9EA8 /* ExtensionsForTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsForTests.swift; sourceTree = "<group>"; };
+		28C5E9A9291B1013002A9EA8 /* DepartmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentTableViewCell.swift; sourceTree = "<group>"; };
+		28C5E9AF291B13C9002A9EA8 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,12 +134,12 @@
 				2840092F291A98AD007A436F /* MetropolitanMuseumOfArt */,
 				280223B629194A7500249E7C /* AppDelegate.swift */,
 				28BB1DCB291977C500A69A86 /* NetworkManager.swift */,
-				28400936291AA198007A436F /* DataManager.swift */,
+				28400936291AA198007A436F /* DataModel.swift */,
+				28C5E9A3291ACAC5002A9EA8 /* DataController.swift */,
 				280223B829194A7500249E7C /* SceneDelegate.swift */,
-				280223BA29194A7500249E7C /* ViewController.swift */,
-				280223BC29194A7500249E7C /* Main.storyboard */,
+				28C5E9AC291B1343002A9EA8 /* ViewControllers */,
 				280223BF29194A7800249E7C /* Assets.xcassets */,
-				280223C129194A7800249E7C /* LaunchScreen.storyboard */,
+				28C5E9AD291B1367002A9EA8 /* Storyboards */,
 				280223C429194A7800249E7C /* Info.plist */,
 			);
 			path = APITest;
@@ -137,6 +151,7 @@
 				28400932291A9AE8007A436F /* JSONTests.swift */,
 				2840093A291AA7B4007A436F /* JSONTestsData.swift */,
 				2840093C291AADAF007A436F /* DataManagerTests.swift */,
+				28C5E9A7291AF5E9002A9EA8 /* ExtensionsForTests.swift */,
 			);
 			path = APITestTests;
 			sourceTree = "<group>";
@@ -159,6 +174,44 @@
 				2840093E291AB4C1007A436F /* Item.swift */,
 			);
 			path = MetropolitanMuseumOfArt;
+			sourceTree = "<group>";
+		};
+		28C5E9AB291B1299002A9EA8 /* Department */ = {
+			isa = PBXGroup;
+			children = (
+				280223BA29194A7500249E7C /* DepartmentsViewController.swift */,
+				28C5E9A5291AD8B4002A9EA8 /* DepartmentsViewModel.swift */,
+				28C5E9A9291B1013002A9EA8 /* DepartmentTableViewCell.swift */,
+			);
+			path = Department;
+			sourceTree = "<group>";
+		};
+		28C5E9AC291B1343002A9EA8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				28C5E9AE291B139A002A9EA8 /* IItemList */,
+				28C5E9AB291B1299002A9EA8 /* Department */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		28C5E9AD291B1367002A9EA8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				280223BC29194A7500249E7C /* Main.storyboard */,
+				280223C129194A7800249E7C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		28C5E9AE291B139A002A9EA8 /* IItemList */ = {
+			isa = PBXGroup;
+			children = (
+				28C5E9AF291B13C9002A9EA8 /* ItemListViewController.swift */,
+				281DF364291B1C2E0004F233 /* ItemListViewModel.swift */,
+				281DF366291B1C3E0004F233 /* ItemTableViewCell.swift */,
+			);
+			path = IItemList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,14 +345,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280223BB29194A7500249E7C /* ViewController.swift in Sources */,
+				280223BB29194A7500249E7C /* DepartmentsViewController.swift in Sources */,
 				2840093F291AB4C1007A436F /* Item.swift in Sources */,
 				28BB1DCC291977C500A69A86 /* NetworkManager.swift in Sources */,
+				28C5E9AA291B1013002A9EA8 /* DepartmentTableViewCell.swift in Sources */,
 				280223B729194A7500249E7C /* AppDelegate.swift in Sources */,
+				281DF365291B1C2E0004F233 /* ItemListViewModel.swift in Sources */,
 				28400931291A9A52007A436F /* MetropolitanMuseusOfArt.swift in Sources */,
+				281DF367291B1C3E0004F233 /* ItemTableViewCell.swift in Sources */,
+				28C5E9A4291ACAC5002A9EA8 /* DataController.swift in Sources */,
 				28400939291AA67A007A436F /* ItemID.swift in Sources */,
+				28C5E9B1291B13C9002A9EA8 /* ItemListViewController.swift in Sources */,
 				280223B929194A7500249E7C /* SceneDelegate.swift in Sources */,
-				28400937291AA198007A436F /* DataManager.swift in Sources */,
+				28C5E9A6291AD8B4002A9EA8 /* DepartmentsViewModel.swift in Sources */,
+				28400937291AA198007A436F /* DataModel.swift in Sources */,
 				28400935291A9C8F007A436F /* Department.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28400933291A9AE8007A436F /* JSONTests.swift in Sources */,
+				28C5E9A8291AF5E9002A9EA8 /* ExtensionsForTests.swift in Sources */,
 				2840093D291AADAF007A436F /* DataManagerTests.swift in Sources */,
 				2840093B291AA7B4007A436F /* JSONTestsData.swift in Sources */,
 			);

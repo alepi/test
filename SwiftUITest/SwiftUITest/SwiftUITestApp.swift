@@ -7,11 +7,17 @@
 
 import SwiftUI
 
+class Item : ObservableObject {
+    @Published var name: String = "1"
+    @Published var price: Double = 20
+}
+
 @main
 struct SwiftUITestApp: App {
+    @StateObject var item = Item()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(item)
         }
     }
 }
